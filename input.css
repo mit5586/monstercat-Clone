@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+.btn{
+    @apply bg-transparent border-2 border-[#F1F1F1] cursor-pointer whitespace-nowrap inline-flex
+     items-center justify-center uppercase relative
+}
+
+
+@tailwind utilities;
+
+body{
+    @apply bg-black text-white font-Monument
+}
+
+.bro{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+}
+

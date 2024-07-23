@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Days - Monstercat</title>
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
+</head>
+
+<body class="">
+    <div class="w-full h-screen -z-10 absolute inset-0 overflow-hidden bg-gradient-to-b from-black to-transparent ">
+        <div
+            class="bg-[url('bg.webp')] blur-sm brightness-[38%] w-[102%] h-[102%] absolute -top-[1%] -left-[1%] bg-center bg-cover -z-10">
+        </div>
+    </div>
+
+    <header class="fixed inset-0 w-full h-full z-40 pointer-events-none">
+        <div class="absolute w-full bottom-4 pointer-events-auto"></div>
+        <div id="header-bar">
+            <div class="bg-black flex justify-between py-3 px-8 relative items-center mx-auto lg:bg-transparent ">
+                <a href="" id="logo" class="pointer-events-auto">
+                    <img src="monstercat-logo.webp" alt="logo" class="w-12 h-12">
+                </a>
+
+                <ul
+                    class="hidden md:flex md:justify-center text-lg list-none space-x-4 lg:absolute lg:top-24 lg:right-0 lg:w-12 text-center mr-5 lg:-z-10 lg:space-x-2 lg:space-y-4 lg:flex-col pointer-events-auto">
+                    <li></li>
+                    <li>
+                        <a class="text-white" href="">
+                            <i class="fab fa-fw fa-instagram before:content-['\f16d']"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="">
+                            <i class="fab fa-fw fa-tiktok before:content-['\f16d']"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="">
+                            <i class="fab fa-fw fa-twitter before:content-['\f16d']"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="">
+                            <i class="fab fa-fw fa-twitch before:content-['\f16d']"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="">
+                            <i class="fab fa-fw fa-twitch before:content-['\f16d']"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="">
+                            <i class="fab fa-fw fa-discord before:content-['\f16d']"></i>
+                        </a>
+                    </li>
+                </ul>
+                <button id="menu-toggle" onclick="toggleMenu()"
+                    class="text-white bg-transparent border-transparent text-2xl ml-0.5 pointer-events-auto">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav id="navigaiton" class="fixed inset-0 w-full h-full -z-10">
+            <div
+                class="h-full w-[420px] max-w-full bg-black overflow-hidden top-0 left-full absolute flex flex-col justify-items-stretch transition-transform duration-200 ease-in-out">
+
+                <div class="top shrink-0 p-8">
+                    <a href="">
+                        <img src="monstercat-logo-white.svg" alt="logo-white" class="w-44 inline-block">
+                    </a>
+                    <button
+                        class="btn text-2xl top-9 right-9 bg-transparent border-transparent text-white cursor-pointer inline-flex items-center justify-center no-underline absolute "
+                        onclick="toggleMenu()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="scroller shrink overflow-auto p-8 basis-full mr-8">
+                    <ul class="list-none font-Monument uppercase text-lg tracking-wider text-white space-y-6">
+                        <li>
+                            <a href="">music</a>
+                        </li>
+                        <li>
+                            <a href="">artists</a>
+                        </li>
+                        <li>
+                            <a href="">about</a>
+                        </li>
+                        <li>
+                            <a href="">news</a>
+                        </li>
+                        <li>
+                            <a href="">events</a>
+                        </li>
+                        <li>
+                            <a href="">programming</a>
+                        </li>
+                        <li>
+                            <a href="">gold</a>
+                        </li>
+                        <li>
+                            <a href="">partners</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="botton mb-8">
+                    <ul class="pt-8 pl-8">
+                        <li class="inline-block mr-2">
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-instagram before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li class="inline-block mr-2">
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-tiktok before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li class="inline-block mr-2">
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-twitter before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li class="inline-block mr-2">
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-twitch before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li class="inline-block mr-2">
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-twitch before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li class="inline-block mr-2">
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-discord before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="uppercase font-Monument text-lg pl-8 mb-auto">
+                        <li class="mt-8 text-white">
+                            <a href=""
+                                class="no-underline font-normal p-2 text-sm text-white btn hover:bg-white hover:text-black">
+                                sign in
+                            </a>
+                            <span class="ml-2 text-sm">or</span>
+                            <a href="" class="btn no-underline font-normal p-2 text-sm text-white border-none">
+                                sign up
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="px-4  md:max-w-[768px] lg:max-w-[992px] xl:max-w-[1200px] 2xl:max-w-[1600px] mx-auto">
+        <section class="flex flex-col gap-8 mt-28 mb-20 lg:pt-20  lg:flex-row lg:items-center lg:gap-24">
+            <div class="flex flex-col-reverse gap-12 lg:w-2/5 md:relative">
+                <div
+                    class="text-gray-200 font-sans text-sm tracking-wide font-extralight md:absolute md:rotate-[270deg] md:inset-0 md:-left-4 md:-top-8">
+                    <span class="text-green-600 font-extralight">Instinct</span>
+                    -Released May 22,2020
+                </div>
+                <div class="">
+                    <img src="bg.webp" alt="">
+                </div>
+            </div>
+            <div class="lg:w-2/5">
+                <div class="font-Monument uppercase space-y-2 lg:space-y-4 lg:mb-16">
+                    <h1 class="text-white text-2xl font-medium lg:text-5xl bro">Level Days</h1>
+                    <p class="text-white text-3xl">Conro</p>
+                </div>
+                <div class="mt-2 space-x-2">
+                    <button
+                        class="text-white bg-teal-600 px-8 py-3 uppercase font-Monument text-sm cursor-pointer hover:bg-white hover:text-black">Listen
+                        Now</button>
+                    <button
+                        class="text-white px-8 py-2.5 uppercase font-Monument text-sm border-[1px] border-white cursor-pointer hover:bg-white hover:text-black">Share</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 lg:mb-20 space-y-4 lg:space-y-8">
+            <h2 class="uppercase text-xl lg:text-[2.5em] tracking-widest leading-none">Stream it your way</h2>
+            <div class="inline-flex justify-between border-[1px] border-white text-xl divide-x-2">
+                <div class="flex items-center p-3 text-base">Player</div>
+                <div class="flex items-center p-3 ">
+                    <i class="fab fa-fw fa-bandcamp"></i>
+                </div>
+                <div class="flex items-center p-3 ">
+                    <i class="fab fa-fw fa-soundcloud"></i>
+                </div>
+                <div class="flex items-center p-3 ">
+                    <i class="fab fa-fw fa-apple"></i>
+                </div>
+                <div class="flex items-center p-3 ">
+                    <i class="fab fa-fw fa-youtube"></i>
+                </div>
+                <div class="flex items-center p-3 ">
+                    <i class="fab fa-fw fa-spotify"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 lg:mb-20">
+            <h2 class="uppercase text-xl lg:text-[2.5em] tracking-widest leading-none my-4">Track list</h2>
+            <table class="text-lg w-full border-collapse font-mono">
+                <tbody>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr id="track-1">
+                        <td class="py-4 px-2 w-8">1</td>
+                        <td class="py-4 px-2 font-semibold flex items-center">
+                            <a href="" class="mr-4 inline-block w-8 text-center cursor-pointer">
+                                <i class="fa fal fa-play"></i>
+                            </a>
+                            <div class="inline-flex flex-col">
+                                The Small Things
+                                <span class="block text-sm">Conro</span>
+                            </div>
+                        </td>
+                        <td class="w-fit px-0 text-center">3:35</td>
+                        <td class="w-fit px-0 ">
+                            <a href="" class="cursor-pointer">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr class="mb-20 mt-28">
+    </div>
+    <footer class="mb-20 mt-8">
+        <div class="px-4  md:max-w-[768px] lg:max-w-[992px] xl:max-w-[1200px] 2xl:max-w-[1600px] mx-auto">
+            <nav class="flex gap-8 flex-col lg:flex-row ">
+                <ul class="uppercase text-sm lg:text-lg leading-relaxed tracking-widest list-none m-0 p-0">
+                    <li>About monstercat</li>
+                    <li>Contact us</li>
+                    <li>careers</li>
+                    <li>news</li>
+                    <li>press</li>
+                </ul>
+                <ul class="uppercase text-sm lg:text-lg leading-relaxed tracking-widest list-none m-0 p-0">
+                    <li>Terms of servie</li>
+                    <li>Privacy Policy</li>
+                </ul>
+
+                <div class="max-w-[33%]">
+                    <p class="uppercase text-neutral-400 text-sm lg:text-lg tracking-widest leading-relaxed">Monstercat
+                        News</p>
+                    <p class="font-mono italic tracking-widest text-sm lg:text-base leading-relaxed my-4">Don't miss a
+                        thing, stay up to date with the latest news from us.</p>
+                </div>
+            </nav>
+            <hr class="mt-12 mb-6">
+            <div class="space-y-4 lg:flex lg:justify-between lg:items-center">
+                <p class="text-center font-mono text-xs lg:text-sm text-neutral-200">2011 - 2022 © Monstercat, All
+                    Rights Reserved</p>
+                <div class="lg:flex lg:items-center lg:justify-center">
+                    <ul class="m-0 p-0 text-xl flex justify-center gap-2">
+                        <li>
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-instagram before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-tiktok before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-twitter before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-twitch before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-twitch before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-discord before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-twitch before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-twitch before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-discord before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="">
+                                <i class="fab fa-fw fa-instagram before:content-['\f16d']"></i>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <p class="text-xs text-center mx-auto italic font-mono text-neutral-200 w-full pt-16 lg:w-3/5">We acknowledge with gratitude the traditional, ancestral and unceded land of the Coast Salish peoples, including the territories of the Sḵwx̱wú7mesh (Squamish), Stó:lō and Səl̓ílwətaʔ/Selilwitulh (Tsleil-Waututh) and xʷməθkʷəy̓əm (Musqueam) Nations, on which Monstercat's Vancouver HQ stands.
+            </p>
+            <p class="text-xs text-center mx-auto italic font-mono text-neutral-200 w-full pt-4 lg:w-3/5">We acknowledge the unceded and ancestral territories of the Gabrielino/Tongva peoples on which our LA team live and work.</p>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
